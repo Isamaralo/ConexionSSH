@@ -5,10 +5,14 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import org.apache.log4j.Logger;
+
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 
 public class MainSSH {
+	
+	private final static Logger log = Logger.getLogger("mylog");
 	
 	private final static String S_PATH_FILE_PRIVATE_KEY = "id_rsa.ppk"; //\\windows absolut path of our ssh private key locally saved
 	private final static String S_PATH_FILE_KNOWN_HOSTS = "known_hosts";
